@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { ActiveLink } from "@/components/active-link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -18,26 +19,11 @@ export function Header() {
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-80">
 				<div className="flex items-center justify-between h-16">
 					<nav className="flex items-center gap-6">
-						<Link
-							href="/"
-							className={cn(
-								"text-sm font-medium transition-colors hover:text-blue-500",
-								isHomePage ? "text-blue-500" : "text-muted-foreground",
-							)}
-						>
-							Início
-						</Link>
-						<Link
-							href="/blog"
-							className={cn(
-								"text-sm font-medium transition-colors hover:text-blue-500",
-								isBlogPage ? "text-blue-500" : "text-muted-foreground",
-							)}
-						>
-							Blog
-						</Link>
-
-						<Button variant="secondary">Começar</Button>
+						<ActiveLink href="/">Início</ActiveLink>
+						<ActiveLink href="/blog">Blog</ActiveLink>
+						<Button variant="secondary" asChild>
+							<Link href="/comecar">Começar</Link>
+						</Button>
 					</nav>
 				</div>
 			</div>
