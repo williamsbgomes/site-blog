@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ActiveLink } from "@/components/active-link";
+import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 
 export function Header() {
@@ -13,9 +13,7 @@ export function Header() {
 		>
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-80">
 				<div className="flex items-center justify-between h-16">
-					<Link href="/">
-						<Image src="/logo.svg" alt={"Logo"} width={116} height={32} />
-					</Link>
+					<Logo />
 
 					<nav className="flex items-center gap-6">
 						<ActiveLink href="/">Início</ActiveLink>
