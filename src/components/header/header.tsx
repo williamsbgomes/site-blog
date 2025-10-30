@@ -1,14 +1,8 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { ActiveLink } from "@/components/active-link";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 export function Header() {
-	const router = useRouter();
-	const isHomePage = router.pathname === "/";
-	const isBlogPage = router.pathname.startsWith("/blog");
-
 	return (
 		<header
 			className={`
